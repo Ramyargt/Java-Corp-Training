@@ -1,0 +1,10 @@
+package session2;
+
+public class SimpleLibraryManage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

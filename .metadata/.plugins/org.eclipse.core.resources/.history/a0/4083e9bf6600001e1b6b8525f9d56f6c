@@ -1,0 +1,139 @@
+package com.rgt.training.session2Basics;
+
+import java.util.Scanner;
+
+public class SimpleLibraryManage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scanner = new Scanner(System.in);
+		Library library = new Library();
+		int choice;
+
+		do {
+			System.out.println("Welcome to Simple Library Management: ");
+			System.out.println("1.Add Book ");
+			System.out.println("2.Add Patron ");
+			System.out.println("3.Borrow Book ");
+			System.out.println("4.Return Book ");
+			System.out.println("5.Book Availability ");
+			System.out.println("6.Borrowed books by Patrons ");
+			System.out.println("7.Exit ");
+			System.out.println("Enter your choice: ");
+			choice = scanner.nextInt();
+
+			switch (choice) {
+			case 1:
+				System.out.println("Enter Book Title");
+				String BookTitle = scanner.next();
+				System.out.println("Enter Book author name");
+				String BookAuthor = scanner.next();
+				library.addBook(BookTitle);
+				break;
+
+			case 2:
+				System.out.println("Enter Patron name");
+				String PatronName = scanner.next();
+				library.addPatron(PatronName);
+				break;
+
+			case 3:
+				System.out.println("Enter Book Title");
+				String Booktitle = scanner.next();
+				library.borrowBook(Booktitle);
+				break;
+
+			case 4:
+				System.out.println("Enter book title to return ");
+				String bookreturn=scanner.next();
+				library.returnbook(bookreturn);
+				break;
+
+			case 5:
+				System.out.println("Total available books count is " +library.bookAvailability);
+				library.availablebooks();
+				break;
+
+			case 6:
+				System.out.println("Total Borrowed books count is: "+library.bookBorrowCount);
+				break;
+
+			case 7:
+				System.out.println("Goodbye!");
+				break;
+			default:
+				System.out.println("Invalid option. Please try again.");
+			}
+		} while (choice < 7);
+	}
+}
+
+class Library {
+
+	final int MAX_BOOKS = 20;
+	final int MAX_PATRONS = 10;
+
+	String[] BookTitles = new String[MAX_BOOKS];
+	String[] Patronnames = new String[MAX_PATRONS];
+
+	int bookcount = 0;
+	int patroncount = 0;
+	int bookAvailability;
+	int booksTotalCount;
+	int bookBorrowCount=0;
+
+	public void addBook(String Booktitle) {
+		bookcount++;
+		if (bookcount <= MAX_BOOKS) {
+			BookTitles[bookcount] = Booktitle;
+			System.out.println("New Book added Successfull---");
+			int booksTotalCount = BookTitles.length - (MAX_BOOKS - bookcount);
+			System.out.println("Total books after adding new Books is " + booksTotalCount);
+		} 
+		else if (bookcount > MAX_BOOKS) {
+			System.out.println("Book storage is overflow ---------");
+			System.out.println("Not able to add new books-------");
+		}
+	}
+
+	public void addPatron(String patron) {
+		patroncount++;
+		if (patroncount <= MAX_PATRONS) {
+			Patronnames[patroncount] = patron;
+			System.out.println("New Patron added Successfull---");
+			System.out.println("Total ptrons added are " + patroncount);
+		} else if (patroncount > MAX_PATRONS) {
+			System.out.println("Patron storage is overflow ---------");
+			System.out.println("Not able to add new patrons-------");
+		}
+	}
+
+	public void borrowBook(String booktitle) {
+		for(String singlebooktitle:BookTitles ) {
+		if(booktitle.equalsIgnoreCase(singlebooktitle)) {	
+			bookBorrowCount++;
+			bookAvailability = booksTotalCount - 1;
+				System.out.println("Book borrowed successfull---------");
+				System.out.println("Total books borrowed is " + bookBorrowCount);
+			}
+		else {
+				System.out.println("Books are not available to borrow----");
+			}
+		}
+	}
+	
+	public void returnbook(String bookreturned) {
+		bookcount= bookcount+1;
+		BookTitles[bookcount] = bookreturned;
+		System.out.println("Book returned successfull------------");
+	}
+	
+	public void availablebooks() {
+		System.out.println("Total Books available are " + bookAvailability);
+		for (int i=0; i<BookTitles.length; i++) {
+			System.out.println("book at index "+i+ "is "+BookTitles[i]);
+		}
+	}
+	
+}
