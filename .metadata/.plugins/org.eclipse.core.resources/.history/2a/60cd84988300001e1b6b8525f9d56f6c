@@ -86,7 +86,9 @@ class Library {
 	public void addBook(String Booktitle) {
 		
 		if (bookAvailability < MAX_BOOKS) {
+			if(bookAvailability==0) {
 			BookTitles[bookAvailability]=Booktitle;
+			}
 			System.out.println("New Book added Successfull---");
 			bookAvailability++;
 			System.out.println("Total books after adding new Books is " + bookAvailability);
