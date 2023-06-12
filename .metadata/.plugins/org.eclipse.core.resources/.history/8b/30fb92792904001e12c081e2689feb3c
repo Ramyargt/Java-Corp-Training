@@ -1,0 +1,64 @@
+package com.rgt.training.session3;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc= new Scanner(System.in);
+		int choice;
+		String vehicle_Name;
+		
+		
+		
+		do {
+			System.out.println("Welcome to Vehicle rental system - Menu");
+			System.out.println("1.Add Vehicle");
+			System.out.println("2.List Available vehicles");
+			System.out.println("3.Rent a Vehicle");
+			System.out.println("4.Calculate rental cost");
+			System.out.println("5.Return vehicle");
+			System.out.println("6.Quit");
+			System.out.println("Enter your choice: ");
+			choice= sc.nextInt();
+			
+			switch(choice) {
+			
+			case 1:
+				System.out.println("Enter Vehicle name");
+				vehicle_Name= sc.next();
+				break;
+				
+			case 2:
+				System.out.println("Available vehicles list is ");
+				break;
+				
+			case 3: 
+				System.out.println("Enter Vehicle name for Rental");
+				vehicle_Name= sc.next();
+				break;
+				
+			case 4:
+				System.out.println("Rental cost for vehicle is : ");
+				break;
+				
+			case 5:
+				System.out.println("Enter Vehicle name to return");
+				vehicle_Name= sc.next();
+				break;
+				
+			case 6:
+				System.out.println("Thnak you ---");
+				break;
+				
+			default:
+				System.out.println("Enter valid choice-----");
+			}
+			
+			System.out.println();
+		} while(choice!=7);
+sc.close();
+	}
+
+}

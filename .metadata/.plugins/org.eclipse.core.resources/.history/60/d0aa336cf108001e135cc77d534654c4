@@ -1,0 +1,53 @@
+package com.rgt.training.session4;
+
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class SetComparision {
+
+	public static void main(String[] args) {
+		Set<String> hashset = new HashSet<>();
+		Set<String> treeset = new TreeSet<>();
+
+		int index = 0;
+
+		long startTime, endTime;
+		// add elements to HashSet and TreeSet
+		startTime = System.nanoTime();
+		hashset.add("java");
+		endTime = System.nanoTime();
+		System.out.println("HashSet: addTime is " + (endTime - startTime) + " ns");
+
+		startTime = System.nanoTime();
+		treeset.add("java");
+		endTime = System.nanoTime();
+		System.out.println("TreeSet: addTime is " + (endTime - startTime) + " ns");
+		System.out.println("_________________________________________________________________________");
+
+		// Get elements from HashSet and TreeSet
+		startTime = System.nanoTime();
+		hashset.iterator().next();
+		endTime = System.nanoTime();
+		System.out.println("HashSet: GetTime is " + (endTime - startTime) + " ns");
+
+		startTime = System.nanoTime();
+		treeset.iterator().next();
+		endTime = System.nanoTime();
+		System.out.println("TreeSet: GetTime is " + (endTime - startTime) + " ns");
+		System.out.println("_________________________________________________________________________");
+
+		// Delete elements from HashSet and TreeSet
+		startTime = System.nanoTime();
+		hashset.remove("java");
+		endTime = System.nanoTime();
+		System.out.println("HashSet: addTime is " + (endTime - startTime) + " ns");
+
+		startTime = System.nanoTime();
+		treeset.remove("java");
+		endTime = System.nanoTime();
+		System.out.println("TreeSet: addTime is " + (endTime - startTime) + " ns");
+		System.out.println("_________________________________________________________________________");
+
+	}
+}

@@ -1,0 +1,10 @@
+package com.rgt.training.session3;
+
+public class Bicycle extends Vehicle{
+
+	public void addVehicle(String vehicle) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

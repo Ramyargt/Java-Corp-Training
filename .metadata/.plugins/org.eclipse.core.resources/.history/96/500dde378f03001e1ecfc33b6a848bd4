@@ -1,0 +1,34 @@
+package sampleCode;
+
+import java.util.Scanner;
+
+public class SampleString {
+	static int	i=0;
+	static String[] array= new String[3];
+	public static String name;
+	static boolean duplicatename;
+	public static void addname(String Name) {
+		if(array[i]!=null)
+		 duplicatename= array[i].equalsIgnoreCase(Name);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter string name --------");
+		 name= sc.next();
+		 addname(name);
+	}
+	
+
+}
+
+
+/*
+ * for (int j=0;j<=i; j++) { if(array[i-j].equalsIgnoreCase(Name)) {
+ * System.out.println("name already exists-----------");
+ * System.out.println("Try with other name-----"); }
+ * 
+ * if(i<=array.length){ array[i]=name; i++;
+ * System.out.println("name added ----------"); } }
+ */	

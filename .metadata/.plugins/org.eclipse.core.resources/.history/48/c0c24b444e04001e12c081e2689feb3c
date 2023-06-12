@@ -1,0 +1,9 @@
+package com.rgt.training.session3;
+
+public class Car extends Vehicle{
+
+	
+	public void addVehicle(String vehicle) {
+    	System.out.println("Vehicle added Successfully------");
+    }
+}

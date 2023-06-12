@@ -1,0 +1,92 @@
+package com.rgt.training.session3;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class Customer {
+
+	private String firstName;
+    private String lastName;
+    private String id;
+    
+	/*
+	 * public Customer(String firstName, String lastName, String id) { super();
+	 * this.firstName = firstName; this.lastName = lastName; this.id = id; }
+	 */
+
+	
+    Scanner sc= new Scanner(System.in);
+    // Getters, setters, and other methods
+	
+    List<String> CustomerfstNames;
+    List<String> CustomerlstNames;
+    List<String> CustomerIDs;
+	
+    public void setCustomersdetails(String fstname, String lstname, String ID) {
+		
+		setFirstName(fstname);
+		//CustomerfstNames.add(firstName);
+		setLastName(lstname);
+		//CustomerlstNames.add(firstName)
+		
+		setId(ID);
+	}
+	
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

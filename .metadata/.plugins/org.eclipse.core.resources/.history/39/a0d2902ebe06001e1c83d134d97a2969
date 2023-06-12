@@ -1,0 +1,14 @@
+package com.rgt.training.session4;
+
+public class CollectionComparision {
+
+	public static void main(String[] args) {
+		
+		private static long getMemoryUsage() {
+			Runtime runtime= Runtime.getRuntime();
+			return runtime.totalMemory()-runtime.freeMemory();
+		}
+
+	}
+
+}

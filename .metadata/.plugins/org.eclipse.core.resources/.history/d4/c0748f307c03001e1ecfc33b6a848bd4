@@ -1,0 +1,32 @@
+package sampleCode;
+
+import java.util.Scanner;
+
+public class SampleString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		String[] array= new String[3];
+		
+		System.out.println("Enter string name --------");
+		String name= sc.next();
+		int	i=0;
+		
+		public void addname(String Name) {
+		while(i<array.length) {
+		array[i]=name;
+		i++;
+		}
+	if(array[i-1].contains(Name)) {
+		System.out.println("name already exists-----------");
+		System.out.println("Try with other name-----");
+	}	
+		
+		}
+	}
+	
+
+}
+
+

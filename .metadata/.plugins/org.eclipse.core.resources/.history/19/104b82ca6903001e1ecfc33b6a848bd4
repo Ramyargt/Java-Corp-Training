@@ -1,0 +1,17 @@
+package sampleCode;
+
+public class SampleString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String[] array= new String[3];
+		for (int i=0; i<array.length; i++) {
+		if(i==0) {
+			array[i]="";
+		}
+		}
+		}
+	}
+
+

@@ -1,0 +1,21 @@
+package com.rgt.training.session4;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class CollectionComparision {
+
+	private static Long getMemoryUsage() {
+		Runtime runtime= Runtime.getRuntime();
+		return runtime.totalMemory()-runtime.freeMemory();
+	}
+	
+	public static void main(String[] args) {
+		List<String>arraylist=new ArrayList<>();
+		List<String>linkedlist=new LinkedList<>();
+		
+
+	}
+
+}

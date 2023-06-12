@@ -1,0 +1,32 @@
+package com.rgt.training.session3;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Car extends Vehicle{
+
+	Scanner sc= new Scanner(System.in);
+	//List<String>vehicledetails; 
+	List<Vehicle> vehicles;
+	public void addVehicleDetails(String license, String make, String model, int vehicleid) {
+		vehicles= new ArrayList<>();
+		setVehicleID(vehicleid);
+		setLicensePlate(license);
+		setMake(make);
+		setModel(model);
+	Object vehicle[]= {license,make,model,vehicleid};
+		vehicles.add(vehicleid);
+	}
+	
+	/*
+	 * public String[] getVehicleDetails() {
+	 * 
+	 * System.out.println("licensePlate is :"+getLicensePlate());
+	 * System.out.println("make of vehicle is :"+getMake());
+	 * System.out.println("model of vehicle is :"+getModel()); // String[] details=
+	 * new String[getLicensePlate(),getMake(),getModel()]; return null;
+	 * 
+	 * }
+	 */
+}

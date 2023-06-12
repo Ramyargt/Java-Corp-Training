@@ -1,0 +1,105 @@
+package com.rgt.training.session3;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class Customer {
+
+	private String firstName;
+	private int customerID;
+	private String custEmial;
+    private String lastName;
+    private String id;
+    
+	Scanner sc= new Scanner(System.in);
+    // Getters, setters, and other methods
+	
+    List<String> CustomerfstNames;
+    List<String> CustomerlstNames;
+    List<String> CustomerIDs;
+	
+    public String getFullName() {
+    	String fullName_Customer= getFirstName()+getLastName();
+    	System.out.println("Customer full name is: "+fullName_Customer);
+		return fullName_Customer;
+    }
+    
+    public String[] getcontactDetailsCustomer() {
+    	String[] Contactdetails = new String[5];
+    	Contactdetails[0]= 
+		return Contactdetails;
+    	
+    }
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+   
+	public int getCustomerID() {
+		return customerID;
+	}
+
+	public void setCustomerID(int customerID) {
+		this.customerID = customerID;
+	}
+
+	public String getCustEmial() {
+		return custEmial;
+	}
+
+	public void setCustEmial(String custEmial) {
+		this.custEmial = custEmial;
+	}
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

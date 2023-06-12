@@ -1,0 +1,41 @@
+package com.rgt.training.session3;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public abstract class Vehicle implements VehicleOperations{
+
+	protected String licensePlate;
+    private String make;
+    private String model;
+    private boolean isAvailable;
+    Scanner sc= new Scanner(System.in);
+    
+    List<String>vehicles; 
+    
+    public void addVehicle(String vehicle ) {
+    	vehicles=new ArrayList<String>();
+    	System.out.println("Vehicle added Successfully------");
+    	System.out.println("Enter vehicle licensePlate: ");
+    	licensePlate=sc.next();
+    	System.out.println("Enter vehicle made by :");
+    	make=sc.next();
+    	System.out.println("Enter vehicle model :");
+    	model=sc.next();
+    }
+    
+	
+    @Override
+	public boolean isAvailable() {
+		
+		return false;
+	}
+
+	@Override
+	public void setAvailable(boolean isAvailable) {
+	
+		
+	}
+
+}

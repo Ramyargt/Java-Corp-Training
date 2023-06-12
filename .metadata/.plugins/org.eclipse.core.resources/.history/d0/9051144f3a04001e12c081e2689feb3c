@@ -1,0 +1,64 @@
+package com.rgt.training.session3;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class Customer {
+
+	private String firstName;
+    private String lastName;
+    private String id;
+    Scanner sc= new Scanner(System.in);
+    // Getters, setters, and other methods
+	
+    List<String> Customer;
+	
+    public void setCustomer() {
+		System.out.println("Enter customer first name");
+		firstName= sc.next();
+		Customer.add(firstName);
+		System.out.println("Enter customer last name");
+		lastName= sc.next();
+		System.out.println("Enter cusotmer ID");
+		id= sc.next();
+	}
+	
+	public List<String> getCustomer() {
+		System.out.println("Customer firstname is " +Customer.get(0));
+		return Customer;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

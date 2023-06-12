@@ -1,0 +1,22 @@
+package com.rgt.training.session3;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		do {
+			
+			System.out.println("Welcome to Vehicle rental system - Menu");
+			System.out.println("1.Add Vehicle");
+			System.out.println("2.List Available vehicles");
+			System.out.println("3.Rent a Vehicle");
+			System.out.println("4.Calculate rental cost");
+			System.out.println("5.Return vehicle");
+			System.out.println("6.Quit");
+			System.out.println("Enter your choice: ");
+						
+		} while(!=7)
+
+	}
+
+}

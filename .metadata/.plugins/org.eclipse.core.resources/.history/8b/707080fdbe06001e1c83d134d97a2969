@@ -1,0 +1,32 @@
+package com.rgt.training.session4;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
+public class CollectionComparision {
+
+	private static Long getMemoryUsage() {
+		Runtime runtime= Runtime.getRuntime();
+		return runtime.totalMemory()-runtime.freeMemory();
+	}
+	
+	public static void main(String[] args) {
+		List<String>arraylist=new ArrayList<>();
+		List<String>linkedlist=new LinkedList<>();
+		
+		Map<Integer,String>hashmap= new HashMap<>();
+		Map<Integer,String>treemap= new TreeMap<>();
+		
+		Set<String>hashset= new HashSet<>();
+		Set<String>treeset= new TreeSet<>();
+
+	}
+
+}

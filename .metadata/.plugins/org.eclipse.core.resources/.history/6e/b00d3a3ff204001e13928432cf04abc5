@@ -1,0 +1,65 @@
+package com.rgt.training.session3;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+public class RentalService implements RentalCostCalculator{
+
+	private List<Vehicle> vehicles;
+    private List<Rental> rentals;
+	Car car=new Car();
+	
+	
+	
+	
+	public RentalService() {
+		super();
+		this.vehicles = new ArrayList<>();
+		this.rentals = new ArrayList<>();
+	}
+	public void addVehicle(Vehicle vehicle) {
+		vehicles.add(vehicle);
+	}
+ // Display available vehicles
+    public List<Vehicle> getAvailableVehicles() {
+    	List<Vehicle>availableVehicles= new ArrayList<>();
+    	for(Vehicle vehicle: vehicles) {
+    		if(vehicle.isAvailable()) {
+    			availableVehicles.add(vehicle);
+    		}
+    	}
+		return availableVehicles;
+            }
+	
+    // Rent a vehicle
+    public Rental rentVehicle(Customer customer, Vehicle vehicle, LocalDateTime startTime, LocalDateTime endTime) {
+		return null;
+         // Implementation
+    }
+
+ 
+
+    // Calculate rental cost (polymorphism)
+    @Override
+    public BigDecimal calculateRentalCost(Rental rental) {
+		return null;
+        // Implementation
+    }
+
+ 
+
+    // Return a rented vehicle
+    public boolean returnVehicle(Rental rental) {
+		return false;
+        // Implementation
+    }
+	
+	
+	/*
+	 * @Override public BigDecimal calculateRentalCost1(Rental rental) { // TODO
+	 * Auto-generated method stub return null; }
+	 */
+
+}

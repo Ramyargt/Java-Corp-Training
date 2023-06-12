@@ -1,0 +1,69 @@
+package com.rgt.training.session3;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public abstract class Vehicle implements VehicleOperations{
+
+	private String licensePlate;
+    private String make;
+    private String model;
+    private String vehicleID;
+    private int rentalPricePerDay;
+    
+    private boolean isAvailable;
+    
+	
+    public Vehicle(String licensePlate, String make, String model, String vehicleID) {
+		super();
+		this.licensePlate = licensePlate;
+		this.make = make;
+		this.model = model;
+		this.vehicleID = vehicleID;
+		this.isAvailable=true;
+	}
+    
+    /*
+	 * public String getVehicleDetails() { String vehicleDetails =
+	 * "\n vehicleID is " + getVehicleID() + "\n vehicle licensePlate is "+
+	 * getLicensePlate() + "\n vehicle made by: "+ getMake()+
+	 * "\n vehicle model is: " + getModel(); System.out.println(vehicleDetails);
+	 * return vehicleDetails; }
+	 * 
+	 * public double getRentalPrice(int hours) { double price_Rental=rentalPrice*
+	 * hours; return price_Rental; }
+	 */
+       
+    public String getLicensePlate() {
+		return licensePlate;
+	}
+
+	public String getMake() {
+		return make;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public String getVehicleID() {
+		return vehicleID;
+	}
+
+	public int getRentalPricePerDay() {
+		return rentalPricePerDay;
+	}
+
+	@Override
+	public boolean isAvailable() {
+		return isAvailable;
+	}
+
+	@Override
+	public void setAvailable(boolean isAvailable) {
+	this.isAvailable= isAvailable;
+		
+	}
+
+}
