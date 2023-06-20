@@ -1,0 +1,44 @@
+package com.rgt.training.session5;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Users {
+
+	public static String userName;
+	public static String passWord;
+	public static String name;
+	public static String bio;
+	public static List<String> following;
+	public static List<String> followers;
+	public static String tweet;
+
+	public Users(String userName, String passWord, String name, String bio) {
+		this.userName = userName;
+		this.passWord = passWord;
+		this.name = name;
+		this.bio = bio;
+		following = new ArrayList<>();
+		followers = new ArrayList<>();
+	}
+
+	public static void follow() {
+		System.out.println("follow user");
+	}
+
+	public static void unfollow() {
+		System.out.println("unfollow user");
+	}
+
+	public static String postTweet(String message, Users user) {
+		System.out.println("posting tweet" +user);
+		return message;
+
+	}
+
+	public static void deleteTweet() {
+		System.out.println("deleting tweet");
+		
+	}
+
+}

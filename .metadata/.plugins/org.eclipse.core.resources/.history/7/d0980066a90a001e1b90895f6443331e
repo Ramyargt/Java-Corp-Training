@@ -1,0 +1,64 @@
+package com.rgt.training.session5;
+
+import java.util.Scanner;
+
+public class RGTMain {
+
+	public static void main(String[] args) {
+		RGTMessaging rgtmessg = new RGTMessaging();
+		Scanner sc = new Scanner(System.in);
+		
+		
+		int choice = 0;
+		do {
+			System.out.println("Welcome To RGT Messaging");
+			System.out.println("1.Register");
+			System.out.println("2.Login");
+			System.out.println("3.Exit");
+
+			System.out.println("Enter your choice: ");
+
+		} while (choice != 3);
+
+		switch (choice) {
+
+		case 1:
+			System.out.println("Please register with valid credentails---");
+			System.out.println("Enter username: ");
+			String username = sc.next();
+			System.out.println("Enter password: ");
+			String password = sc.next();
+			System.out.println("Enter name: ");
+			String name = sc.next();
+			System.out.println("Enter Bio");
+			String bio= sc.next();
+			Users userobj= new Users(username,password,name,bio);
+			rgtmessg.register();
+			break;
+
+		case 2:
+			System.out.println("If you are already Registered, Please do login: ");
+			System.out.println("Enter username ");
+			String username = sc.next();
+			System.out.println("Enter password");
+			String password = sc.next();
+			rgtmessg.logIn(username, password);
+			break;
+
+		case 3:
+			System.out.println("Thank you---");
+			break;
+
+		default:
+			System.out.println("Please enter valid choice-----");
+		}
+
+	}
+	
+  }
+  
+	class Welcome() {
+	   Scanner sc = new Scanner(System.in);
+	   int choice;
+	   
+}

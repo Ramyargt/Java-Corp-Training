@@ -1,0 +1,35 @@
+package com.rgt.training.session5;
+
+public class Users {
+
+	public static String userName;
+	public static String passWord;
+	public static String name;
+	public static String bio;
+	public static String following;
+	public static String followers;
+	public static String tweet;
+	
+	public Customer(String firstName, String customerID, String custEmail, String lastName, String phoneNumber) {
+		this.userName = firstName;
+		this.passWord = customerID;
+		this.following = custEmail;
+		this.followers = lastName;
+		this.tweet = phoneNumber;
+	}
+	
+	public static void follow() {
+		System.out.println("follow user");
+	}
+	public static void unfollow() {
+		System.out.println("unfollow user");
+	}
+	public static void postTweet() {
+		System.out.println("posting tweet");
+		
+	}
+	public static void deleteTweet() {
+		System.out.println("deleting tweet");
+	}
+	
+}

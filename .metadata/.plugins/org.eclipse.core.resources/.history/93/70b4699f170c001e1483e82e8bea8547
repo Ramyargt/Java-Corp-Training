@@ -1,0 +1,45 @@
+package com.rgt.training.session5;
+
+import java.time.LocalDateTime;
+
+public class Tweet {
+	public  String id;
+	public  String content;
+	public  String author;
+	public  LocalDateTime timeStamp;
+	//public static String userName;
+	
+	
+	public Tweet(String id, String content, String author, LocalDateTime time) {
+		this.id = id;
+		this.content = content;
+		this.author = author;
+		this.timeStamp = time;
+	}
+	
+	public String getId() {
+		return id;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public String getTimeStamp() {
+		return timeStamp;
+	}
+
+	public static void like() {
+		
+	}
+	public static void retweet() {
+		
+	}
+	public static void reply() {
+		
+	}
+}

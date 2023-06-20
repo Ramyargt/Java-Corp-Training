@@ -1,0 +1,57 @@
+package com.rgt.training.session5;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Users extends RGTMessaging{
+
+	public static String userName;
+	public static String passWord;
+	public static String name;
+	public static String bio;
+	public static List<String> following;
+	public static List<String> followers;
+	public static String tweet;
+	List<String> tweets= new ArrayList<>();
+	Map<String, Users>	users = new HashMap<>();
+	
+public Users(String userName, String passWord, String name, String bio) {
+		this.userName = userName;
+		this.passWord = passWord;
+		this.name = name;
+		this.bio = bio;
+		following = new ArrayList<>();
+		followers = new ArrayList<>();
+	}
+
+	public void follow(String username, Users user) {
+		System.out.println("follow user");
+		following.add(username);
+		Users.followers.add(username);
+		if (!users.containsKey(username)) {
+			users.put(username, user);
+			System.out.println("unfollowing user"+ username);
+		}
+	}
+
+	public void unfollow(String username) {
+		following.remove(users);
+		
+			users.remove(username);
+			System.out.println("unfollowing user"+ username);
+	
+	}
+
+	public static String postTweet(String tweet, String user) {
+		System.out.println("posting tweet" +user);
+		return tweet+": " +user;
+	}
+
+	public void deleteTweet(String tweet) {
+		tweets.remove(tweet);
+		System.out.println("deleting tweet");
+	}
+
+}

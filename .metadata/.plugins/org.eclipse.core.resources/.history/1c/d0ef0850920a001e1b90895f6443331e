@@ -1,0 +1,15 @@
+package com.rgt.training.session5;
+
+public class DataStore {
+
+	public void saveData() {
+		
+	}
+	public void loadData() {
+		
+		
+	}
+	public void generateTweet() {
+		
+	}
+}

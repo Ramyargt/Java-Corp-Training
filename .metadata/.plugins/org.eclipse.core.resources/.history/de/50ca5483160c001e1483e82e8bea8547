@@ -1,0 +1,18 @@
+package com.rgt.training.session5;
+
+public class Tweet {
+	public static String id;
+	public static String content;
+	public static String author;
+	public static String timeStamp;
+	//public static String userName;
+	public static void like() {
+		
+	}
+	public static void retweet() {
+		
+	}
+	public static void reply() {
+		
+	}
+}

@@ -1,0 +1,22 @@
+package com.rgt.training.session5;
+
+import java.util.Scanner;
+
+public class RGTMain {
+
+	public static void main(String[] args) {
+		
+		Scanner sc= new Scanner(System.in);
+
+		do {
+			System.out.println("Welcome To RGT Messaging");
+			System.out.println("1.Register");
+			System.out.println("2.Login");
+			System.out.println("3.Exit");
+			
+			System.out.println("Enter your choice: ");
+			
+		}
+	}
+
+}

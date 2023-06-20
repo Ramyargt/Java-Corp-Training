@@ -1,9 +1,0 @@
-package com.rgt.training.session3;
-
-public class Car {
-
-	
-	public void addVehicle(String vehicle) {
-    	System.out.println("Vehicle added Successfully------");
-    }
-}

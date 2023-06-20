@@ -1,0 +1,7 @@
+package com.rgt.training.session5;
+
+public class Users {
+
+	public static String userName;
+	
+}

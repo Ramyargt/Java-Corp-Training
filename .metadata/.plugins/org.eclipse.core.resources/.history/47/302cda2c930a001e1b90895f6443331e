@@ -1,0 +1,42 @@
+package com.rgt.training.session5;
+
+import java.util.Scanner;
+
+public class RGTMain {
+
+	public static void main(String[] args) {
+		
+		Scanner sc= new Scanner(System.in);
+            int choice = 0;
+		do {
+			System.out.println("Welcome To RGT Messaging");
+			System.out.println("1.Register");
+			System.out.println("2.Login");
+			System.out.println("3.Exit");
+			
+			System.out.println("Enter your choice: ");
+			
+		}while(choice!=3); 
+		
+		switch(choice) {
+		
+		case 1: 
+			System.out.println("Please register with valid credentails---");
+			break;
+			
+		case 2: 
+			System.out.println("If you are already Registered, Please do login: ");
+			break;
+			
+		case 3: 
+			System.out.println("Thank you---");
+			break;
+			
+			default:
+				System.out.println("Please enter valid choice-----");
+		}
+			
+		
+	}
+
+}

@@ -67,7 +67,7 @@ public class Main {
 				break;
 
 			case 3:
-				System.out.println("Enter Vehicle type for Rental");
+				System.out.println("Enter Vehicle Made by: " );
 				v_Type = sc.next();
 				if (selectVehicle(v_Type) != null) {
 					Vehicle vehicle_make = (Vehicle) selectVehicle(v_Type);

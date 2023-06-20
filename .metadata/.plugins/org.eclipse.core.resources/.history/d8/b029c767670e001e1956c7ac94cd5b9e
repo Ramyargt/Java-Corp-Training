@@ -1,0 +1,77 @@
+package com.rgt.training.session5;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Users extends RGTMessaging {
+
+	public static String userName;
+	public static String passWord;
+	public static String name;
+	public static String bio;
+	public static List<String> following;
+	public static List<String> followers;
+	public static Tweet tweet;
+	List<Tweet> tweets = new ArrayList<>();
+	Map<String, Users> users = new HashMap<>();
+
+	public Users(String userName, String passWord, String name, String bio) {
+		this.userName = userName;
+		this.passWord = passWord;
+		this.name = name;
+		this.bio = bio;
+		following = new ArrayList<>();
+		followers = new ArrayList<>();
+	}
+
+	public static String getUserName() {
+		return userName;
+	}
+
+	public static String getBio() {
+		return bio;
+	}
+	public static String getName() {
+		return name;
+	}
+	public static List<String> getFollowing() {
+		return following;
+	}
+
+	public static List<String> getFollowers() {
+		return followers;
+	}
+
+	public void follow(String username, Users user) {
+		System.out.println("follow user");
+		following.add(username);
+		user.followers.add(username);
+	}
+
+	public void unfollow(String username, Users user) {
+		following.remove(username);
+		user.followers.remove(username);
+		System.out.println("unfollowing user" + username);
+	}
+
+	public static void postTweet(String tweet, String username) {
+		System.out.println("posting tweet: " + tweet+"_"+username);
+	}
+
+	public void deleteTweet(Scanner sc) {
+		System.out.println("printing all tweets: " + tweets);
+		System.out.println("Enter tweetID to search: ");
+		String tweet_id = sc.next();
+		System.out.println("Searching for tweet----");
+		for (Tweet tweet : tweets) {
+			if (tweet.getId().equalsIgnoreCase(tweet_id)) {
+				tweets.remove(tweet);
+			}
+		}
+		System.out.println("tweet deleted");
+	}
+
+}

@@ -1,0 +1,155 @@
+package com.rgt.training.session5;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Scanner;
+
+public class RGTMessaging {
+
+	HashMap<String, Users> users = new HashMap<>();
+	List<Tweet> tweets = new ArrayList<>();
+	Tweet tweet;
+	Users user;
+	public static boolean status = true;
+
+	public boolean register(String username, Users user) {
+
+		if (users.containsKey(username)) {
+			System.out.println("User already Registered, please do Login");
+		} else if (!users.containsKey(username)) {
+			users.put(username, user);
+			System.out.println("User Registered successfull");
+		} else {
+			System.out.println("Please register with valid credentails---");
+			status = false;
+		}
+		return status;
+	}
+
+	public void logIn(String uname, String pwd) {
+		if (users.containsKey(uname) && (user.getPassWord().equalsIgnoreCase(pwd))) {
+			System.out.println("User logged in successfull------");
+			welcome(uname);
+		} else {
+			System.out.println("Invalid credentials, please try again");
+		}
+	}
+
+	public void welcome(String username) {
+		int choice;
+		Scanner sc = new Scanner(System.in);
+		do {
+			System.out.println("-------------------------------------------");
+			System.out.println("Welcome " + username);
+			System.out.println("1. Post a Tweet");
+			System.out.println("2. View your TimeLine");
+			System.out.println("3. Search for Users");
+			System.out.println("4. Search for tweets");
+			System.out.println("5. View your Profile");
+			System.out.println("6. View your followers");
+			System.out.println("7. LogOut");
+
+			System.out.println("Enter your choice: ");
+			choice = sc.nextInt();
+			switch (choice) {
+			case 1:
+				System.out.println("Enter tweet id: ");
+				String tweetid = sc.next();
+				System.out.println("Enter tweet message");
+				String content = sc.next();
+				Users.postTweet(content, username);
+				Tweet tweet = new Tweet(tweetid, content, username, LocalDateTime.now());
+				tweets.add(tweet);
+				break;
+
+			case 2:
+				System.out.println("View your Timeline");
+				System.out.println("Number of Users availble are: " + users.size());
+				System.out.println("User details are :");
+				for (String userName : users.keySet()) {
+					System.out.println("available user is : " + userName);
+				}
+				System.out.println();
+				break;
+
+			case 3:
+				searchUser(sc);
+				break;
+
+			case 4:
+				searchTweet(sc);
+				break;
+
+			case 5:
+				getProfile(sc);
+				break;
+			
+			case 6:
+			List<String>followers=Users.getFollowers();
+			System.out.println("Followers are: "+followers);
+				break;
+			
+			case 7:
+				logOut();
+				break;
+
+			default:
+				System.out.println("Please enter valid choice");
+			}
+
+		} while (choice != 7);
+
+	}
+
+	public static void logOut() {
+		System.out.println("User logged out successfull--------");
+	}
+
+	public void searchUser(Scanner sc) {
+		System.out.println("Enter username to search-----");
+		String searchUser = sc.next();
+		System.out.println("Searching for Users");
+		if (users.containsKey(searchUser)) {
+			System.out.println("Displaying search user details: " );
+			System.out.println("User name is: " + user.getName());
+			System.out.println("User bio is: " + user.getBio());
+		} else {
+			System.out.println("SearchUser not found-----");
+		}
+	}
+
+	public void searchTweet(Scanner sc) {
+		System.out.println("Enter tweetID to search: ");
+		String tweet_id = sc.next();
+		System.out.println("Searching for tweet----");
+		for (Tweet tweet : tweets) {
+			if (tweet.getId().equalsIgnoreCase(tweet_id)) {
+				System.out.println("Displaying tweet details: ");
+				System.out.println("tweet id is: " + tweet.getId());
+				System.out.println("tweet content is: " + tweet.getContent());
+				System.out.println("tweet Author is: " + tweet.getAuthor());
+				System.out.println("tweet time is: " + tweet.getTimeStamp());
+			} else {
+				System.out.println("tweet not found-----");
+			}
+		}
+	}
+
+	public void getTimeline() {
+
+	}
+
+	public void getProfile(Scanner sc) {
+		System.out.println("Enter username to get Profile-----");
+		String userProfile = sc.next();
+		System.out.println("User Profile details are :");
+		if (users.containsKey(userProfile)) {
+			System.out.println("Displaying user profile: ");
+			System.out.println("User name is: " + user.getName());
+			System.out.println("User bio is: " + user.getBio());
+			//System.out.println("User tweets are: ");
+		}
+	}
+}

@@ -1,0 +1,10 @@
+package com.rgt.training.session5;
+
+public class RGTMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
